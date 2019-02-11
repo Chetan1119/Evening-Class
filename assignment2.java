@@ -1,4 +1,3 @@
-/*singly circular linked list*/
 import java.util.*;
 class Node {
   int data;
@@ -28,6 +27,7 @@ void add(int d)
     t.next=temp;
     temp.next=head;
   }
+}
   void display()
   {
     Node j=head;
@@ -38,12 +38,21 @@ void add(int d)
       }
       System.out.print(j.data);
   }
-  public static void main(String [] args)
-  {
+     public static void main(String[] args){
     Main obj=new Main();
-    Scanner 
+    Scanner sc=new Scanner(System.in);
+    System.out.print("enter the number of nodes");
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++)
+    {
+       System.out.print("enter the data parts for the nodes");
+       int p=sc.nextInt();
+       obj.add(p);
+    }
+    obj.display();
   }
+
 }
 
 
-}
+
